@@ -9,16 +9,16 @@ const config: StorybookConfig = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    '@storybook/addon-themes',
+    '@storybook/addon-themes'
   ],
   framework: {
     name: '@storybook/nextjs',
-    options: {},
+    options: {}
   },
   docs: {
-    autodocs: true,
+    autodocs: true
   },
-  staticDirs: ['../public'],
+  staticDirs: ['../public']
 };
 
 export default config;
