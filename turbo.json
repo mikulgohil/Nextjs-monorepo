@@ -1,28 +1,23 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": [".env"],
+  "globalDependencies": ["**/.env.*local"],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**", "dist/**", "storybook-static/**"]
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+    },
+    "build-storybook": {
+      "dependsOn": ["^build"],
+      "outputs": ["storybook-static/**"],
+      "cache": true
     },
     "dev": {
       "cache": false,
       "persistent": true
     },
-    "test": {
-      "dependsOn": ["^build"],
-      "outputs": ["coverage/**"]
-    },
-    "lint": {
-      "outputs": []
-    },
     "storybook": {
-      "dependsOn": ["^build"],
-      "outputs": ["storybook-static/**"]
-    },
-    "clean": {
-      "cache": false
+      "cache": false,
+      "persistent": true
     }
   }
 } 

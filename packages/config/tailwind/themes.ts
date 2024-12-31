@@ -1,29 +1,37 @@
-export const themeVariables = {
-  prime: {
-    // Colors
-    '--color-primary': '#2563eb',
-    '--color-secondary': '#1f2937',
-    '--color-accent': '#f59e0b',
-    // Fonts
-    '--font-base': 'Inter',
-    '--font-heading': 'Montserrat',
+import { focusTheme } from './themes/focus-theme'
+import { primeTheme } from './themes/prime-theme'
+import { sharpTheme } from './themes/sharp-theme'
+
+export const themes = {
+  focus: focusTheme,
+  prime: primeTheme,
+  sharp: sharpTheme,
+}
+
+export type ThemeType = keyof typeof themes
+
+// Keyframes for animations
+export const keyframes = {
+  'fade-in': {
+    '0%': { opacity: '0' },
+    '100%': { opacity: '1' },
   },
-  sharp: {
-    // Colors
-    '--color-primary': '#059669',
-    '--color-secondary': '#0f172a',
-    '--color-accent': '#e11d48',
-    // Fonts
-    '--font-base': 'Roboto',
-    '--font-heading': 'Poppins',
+  'slide-up': {
+    '0%': { transform: 'translateY(10px)', opacity: '0' },
+    '100%': { transform: 'translateY(0)', opacity: '1' },
   },
-  focus: {
-    // Colors
-    '--color-primary': '#7c3aed',
-    '--color-secondary': '#18181b',
-    '--color-accent': '#f97316',
-    // Fonts
-    '--font-base': 'Open Sans',
-    '--font-heading': 'Playfair Display',
+  'slide-down': {
+    '0%': { transform: 'translateY(-10px)', opacity: '0' },
+    '100%': { transform: 'translateY(0)', opacity: '1' },
   },
-} 
+  'slide-left': {
+    '0%': { transform: 'translateX(10px)', opacity: '0' },
+    '100%': { transform: 'translateX(0)', opacity: '1' },
+  },
+  'slide-right': {
+    '0%': { transform: 'translateX(-10px)', opacity: '0' },
+    '100%': { transform: 'translateX(0)', opacity: '1' },
+  },
+}
+
+export { focusTheme, primeTheme, sharpTheme }

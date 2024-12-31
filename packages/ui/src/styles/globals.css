@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Add your theme variables here */
+}
+
+.theme-prime {
+  /* Prime theme variables */
+}
+
+.theme-sharp {
+  /* Sharp theme variables */
+}
+
+.theme-focus {
+  /* Focus theme variables */
+} 
