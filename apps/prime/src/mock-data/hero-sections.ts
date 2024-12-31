@@ -9,7 +9,7 @@ export const heroSectionsMockData = {
   },
   membership: {
     hero: {
-      title: 'Prime Membership',
+      title: 'Prime Membership test',
       subtitle: 'Join our premium membership for exclusive benefits',
       ctaText: 'Join Now',
       className: 'py-20 bg-gradient-to-r from-primary/10 to-primary/5'
