@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd ../.. && pnpm run build --filter focus",
+  "outputDirectory": "apps/focus/.next",
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD ./apps/focus/",
+  "installCommand": "pnpm install",
+  "framework": "nextjs"
+} 

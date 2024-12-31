@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd ../.. && pnpm run build --filter docs",
+  "outputDirectory": "apps/docs/.next",
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD ./apps/docs/",
+  "installCommand": "pnpm install",
+  "framework": "nextjs"
+} 
