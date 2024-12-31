@@ -1,4 +1,4 @@
-import type { Config } from 'postcss'
+import type { Config } from 'postcss-load-config'
 
 const config: Config = {
   plugins: {
@@ -7,4 +7,4 @@ const config: Config = {
   },
 }
 
-export default config 
+export default config

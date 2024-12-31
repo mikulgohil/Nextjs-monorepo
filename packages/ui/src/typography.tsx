@@ -1,3 +1,6 @@
+import { clsx } from 'clsx'
+import React from 'react'
+
 export const Heading = ({
   children,
   className,
@@ -5,7 +8,7 @@ export const Heading = ({
 }: React.HTMLAttributes<HTMLHeadingElement>) => {
   return (
     <h2 
-      className={cn(
+      className={clsx(
         "font-heading text-2xl font-bold",
         className
       )}
@@ -23,7 +26,7 @@ export const Text = ({
 }: React.HTMLAttributes<HTMLParagraphElement>) => {
   return (
     <p 
-      className={cn(
+      className={clsx(
         "font-sans text-base",
         className
       )}
@@ -32,4 +35,4 @@ export const Text = ({
       {children}
     </p>
   )
-} 
+}

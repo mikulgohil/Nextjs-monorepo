@@ -14,6 +14,7 @@ const Home: FC<HomePageProps> = () => {
         ctaText="Free trial for 30 days"
         className="max-w-3xl mx-auto"
       />
+      <div className='text-primary'>Hello</div>
     </main>
   )
 }
