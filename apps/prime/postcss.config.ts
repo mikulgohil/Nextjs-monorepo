@@ -7,4 +7,4 @@ const config = {
   },
 } as const
 
-export default config 
+export default config

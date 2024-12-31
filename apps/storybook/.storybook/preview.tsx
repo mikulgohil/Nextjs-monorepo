@@ -14,9 +14,9 @@ const preview: Preview = {
         { name: 'prime', class: 'theme-prime', color: '#2563eb' },
         { name: 'sharp', class: 'theme-sharp', color: '#059669' },
         { name: 'focus', class: 'theme-focus', color: '#7c3aed' },
-      ]
-    }
-  }
+      ],
+    },
+  },
 }
 
-export default preview 
+export default preview

@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss'
-import { keyframes } from './themes'
+import { keyframes } from './themes.ts'
 
 export const baseConfig: Partial<Config> = {
   content: [
@@ -65,40 +65,58 @@ export const baseConfig: Partial<Config> = {
         mono: ['var(--font-mono)'],
       },
       fontSize: {
-        'display-1': ['var(--font-size-display-1)', { lineHeight: 'var(--line-height-display-1)' }],
-        'display-2': ['var(--font-size-display-2)', { lineHeight: 'var(--line-height-display-2)' }],
-        'h1': ['var(--font-size-h1)', { lineHeight: 'var(--line-height-h1)' }],
-        'h2': ['var(--font-size-h2)', { lineHeight: 'var(--line-height-h2)' }],
-        'h3': ['var(--font-size-h3)', { lineHeight: 'var(--line-height-h3)' }],
-        'h4': ['var(--font-size-h4)', { lineHeight: 'var(--line-height-h4)' }],
-        'body-lg': ['var(--font-size-body-lg)', { lineHeight: 'var(--line-height-body-lg)' }],
-        'body': ['var(--font-size-body)', { lineHeight: 'var(--line-height-body)' }],
-        'body-sm': ['var(--font-size-body-sm)', { lineHeight: 'var(--line-height-body-sm)' }],
-        'caption': ['var(--font-size-caption)', { lineHeight: 'var(--line-height-caption)' }],
+        'display-1': [
+          'var(--font-size-display-1)',
+          { lineHeight: 'var(--line-height-display-1)' },
+        ],
+        'display-2': [
+          'var(--font-size-display-2)',
+          { lineHeight: 'var(--line-height-display-2)' },
+        ],
+        h1: ['var(--font-size-h1)', { lineHeight: 'var(--line-height-h1)' }],
+        h2: ['var(--font-size-h2)', { lineHeight: 'var(--line-height-h2)' }],
+        h3: ['var(--font-size-h3)', { lineHeight: 'var(--line-height-h3)' }],
+        h4: ['var(--font-size-h4)', { lineHeight: 'var(--line-height-h4)' }],
+        'body-lg': [
+          'var(--font-size-body-lg)',
+          { lineHeight: 'var(--line-height-body-lg)' },
+        ],
+        body: [
+          'var(--font-size-body)',
+          { lineHeight: 'var(--line-height-body)' },
+        ],
+        'body-sm': [
+          'var(--font-size-body-sm)',
+          { lineHeight: 'var(--line-height-body-sm)' },
+        ],
+        caption: [
+          'var(--font-size-caption)',
+          { lineHeight: 'var(--line-height-caption)' },
+        ],
       },
       spacing: {
         '2xs': 'var(--spacing-2xs)',
-        'xs': 'var(--spacing-xs)',
-        'sm': 'var(--spacing-sm)',
-        'md': 'var(--spacing-md)',
-        'lg': 'var(--spacing-lg)',
-        'xl': 'var(--spacing-xl)',
+        xs: 'var(--spacing-xs)',
+        sm: 'var(--spacing-sm)',
+        md: 'var(--spacing-md)',
+        lg: 'var(--spacing-lg)',
+        xl: 'var(--spacing-xl)',
         '2xl': 'var(--spacing-2xl)',
         '3xl': 'var(--spacing-3xl)',
       },
       borderRadius: {
-        'none': '0',
-        'sm': 'var(--radius-sm)',
-        'md': 'var(--radius-md)',
-        'lg': 'var(--radius-lg)',
-        'xl': 'var(--radius-xl)',
-        'full': '9999px',
+        none: '0',
+        sm: 'var(--radius-sm)',
+        md: 'var(--radius-md)',
+        lg: 'var(--radius-lg)',
+        xl: 'var(--radius-xl)',
+        full: '9999px',
       },
       boxShadow: {
-        'sm': 'var(--shadow-sm)',
-        'md': 'var(--shadow-md)',
-        'lg': 'var(--shadow-lg)',
-        'xl': 'var(--shadow-xl)',
+        sm: 'var(--shadow-sm)',
+        md: 'var(--shadow-md)',
+        lg: 'var(--shadow-lg)',
+        xl: 'var(--shadow-xl)',
       },
       keyframes,
       animation: {
@@ -109,14 +127,30 @@ export const baseConfig: Partial<Config> = {
         'slide-right': 'slide-right var(--duration-normal) var(--ease-default)',
       },
       transitionDuration: {
-        'fast': 'var(--duration-fast)',
-        'normal': 'var(--duration-normal)',
-        'slow': 'var(--duration-slow)',
+        fast: 'var(--duration-fast)',
+        normal: 'var(--duration-normal)',
+        slow: 'var(--duration-slow)',
       },
       transitionTimingFunction: {
         'ease-default': 'var(--ease-default)',
         'ease-in-out': 'var(--ease-in-out)',
         'ease-bounce': 'var(--ease-bounce)',
+      },
+      buttons: {
+        'btn-primary': {
+          backgroundColor: 'var(--primary-600)',
+          color: 'white',
+          '&:hover': {
+            backgroundColor: 'var(--primary-700)',
+          },
+        },
+        'btn-secondary': {
+          backgroundColor: 'var(--gray-100)',
+          color: 'var(--gray-900)',
+          '&:hover': {
+            backgroundColor: 'var(--gray-200)',
+          },
+        },
       },
     },
   },

@@ -13,7 +13,13 @@ describe('Button', () => {
   it('applies default variant and size classes', () => {
     render(<Button>Default Button</Button>)
     const button = screen.getByRole('button')
-    expect(button).toHaveClass('bg-primary', 'text-white', 'h-10', 'px-4', 'py-2')
+    expect(button).toHaveClass(
+      'bg-primary',
+      'text-white',
+      'h-10',
+      'px-4',
+      'py-2'
+    )
   })
 
   it('applies secondary variant classes', () => {
@@ -59,7 +65,11 @@ describe('Button', () => {
   })
 
   it('forwards additional props to button element', () => {
-    render(<Button data-testid="test-button" disabled>Disabled Button</Button>)
+    render(
+      <Button data-testid="test-button" disabled>
+        Disabled Button
+      </Button>
+    )
     const button = screen.getByRole('button')
     expect(button).toHaveAttribute('data-testid', 'test-button')
     expect(button).toBeDisabled()

@@ -1,9 +1,9 @@
 'use client'
 
 import { createContext, useContext, useState, useEffect } from 'react'
-import { primeTheme } from '@repo/config/tailwind/themes/prime-theme'
-import { sharpTheme } from '@repo/config/tailwind/themes/sharp-theme'
-import { focusTheme } from '@repo/config/tailwind/themes/focus-theme'
+import { primeTheme } from './../../../packages/config/tailwind/themes/prime-theme'
+import { sharpTheme } from './../../../packages/config/tailwind/themes/sharp-theme'
+import { focusTheme } from './../../../packages/config/tailwind/themes/focus-theme'
 
 type Theme = 'prime' | 'sharp' | 'focus'
 
@@ -22,7 +22,7 @@ const themes = {
 
 export function ThemeProvider({
   children,
-  defaultTheme = 'prime'
+  defaultTheme = 'prime',
 }: {
   children: React.ReactNode
   defaultTheme?: Theme
@@ -51,4 +51,4 @@ export function useTheme() {
     throw new Error('useTheme must be used within a ThemeProvider')
   }
   return context
-} 
+}

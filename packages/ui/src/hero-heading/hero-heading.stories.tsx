@@ -6,8 +6,8 @@ const meta: Meta<typeof HeroHeading> = {
   component: HeroHeading,
   tags: ['autodocs'],
   parameters: {
-    layout: 'centered'
-  }
+    layout: 'centered',
+  },
 }
 
 export default meta
@@ -17,8 +17,8 @@ export const Default: Story = {
   args: {
     title: 'Start your free trial today',
     subtitle: 'Try Flowbite Platform for 30 days. No credit card required.',
-    ctaText: 'Free trial for 30 days'
-  }
+    ctaText: 'Free trial for 30 days',
+  },
 }
 
 export const WithCustomStyles: Story = {
@@ -26,6 +26,6 @@ export const WithCustomStyles: Story = {
     title: 'Start your free trial today',
     subtitle: 'Try Flowbite Platform for 30 days. No credit card required.',
     ctaText: 'Free trial for 30 days',
-    className: 'max-w-3xl mx-auto'
-  }
-} 
+    className: 'max-w-3xl mx-auto',
+  },
+}

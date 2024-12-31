@@ -5,20 +5,20 @@ export const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-primary text-white hover:bg-primary/90',
-        secondary: 'bg-secondary text-white hover:bg-secondary/90',
-        accent: 'bg-accent text-white hover:bg-accent/90',
-        outline: 'border border-primary text-primary hover:bg-primary/10'
+        default: 'bg-primary text-white hover:bg-primary-dark',
+        secondary: 'bg-secondary text-white hover:bg-secondary-dark',
+        accent: 'bg-accent text-white hover:bg-accent-dark',
+        outline: 'border border-primary text-primary hover:bg-primary-light',
       },
       size: {
         default: 'h-10 px-4 py-2',
         sm: 'h-9 px-3',
-        lg: 'h-11 px-8'
-      }
+        lg: 'h-11 px-8',
+      },
     },
     defaultVariants: {
       variant: 'default',
-      size: 'default'
-    }
+      size: 'default',
+    },
   }
-) 
+)

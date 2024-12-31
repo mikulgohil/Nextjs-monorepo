@@ -3,7 +3,7 @@ import type { Config } from 'tailwindcss'
 const config: Config = {
   content: [
     './src/**/*.{js,ts,jsx,tsx,mdx}',
-    '../../packages/ui/src/**/*.{js,ts,jsx,tsx,mdx}'
+    '../../packages/ui/src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -12,11 +12,11 @@ const config: Config = {
         secondary: '#3b82f6',
         accent: '#60a5fa',
         background: '#f8fafc',
-        text: '#0f172a'
-      }
-    }
+        text: '#0f172a',
+      },
+    },
   },
-  plugins: []
+  plugins: [],
 }
 
-export default config 
+export default config

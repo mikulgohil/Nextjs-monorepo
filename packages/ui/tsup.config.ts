@@ -11,5 +11,5 @@ export default defineConfig({
   target: 'es2020',
   minify: true,
   treeshake: true,
-  platform: 'browser'
-}) 
+  platform: 'browser',
+})

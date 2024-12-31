@@ -2,4 +2,4 @@
   "buildCommand": "pnpm run build-storybook",
   "outputDirectory": "storybook-static",
   "installCommand": "pnpm install"
-} 
+}

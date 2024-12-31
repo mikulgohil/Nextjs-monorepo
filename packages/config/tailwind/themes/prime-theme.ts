@@ -76,9 +76,12 @@ export const primeTheme = {
 
     // Shadows - More dramatic
     '--shadow-sm': '0 2px 4px 0 rgb(0 0 0 / 0.1)',
-    '--shadow-md': '0 6px 12px -2px rgb(0 0 0 / 0.15), 0 3px 6px -3px rgb(0 0 0 / 0.15)',
-    '--shadow-lg': '0 15px 25px -5px rgb(0 0 0 / 0.15), 0 8px 10px -6px rgb(0 0 0 / 0.15)',
-    '--shadow-xl': '0 25px 35px -8px rgb(0 0 0 / 0.15), 0 12px 15px -8px rgb(0 0 0 / 0.15)',
+    '--shadow-md':
+      '0 6px 12px -2px rgb(0 0 0 / 0.15), 0 3px 6px -3px rgb(0 0 0 / 0.15)',
+    '--shadow-lg':
+      '0 15px 25px -5px rgb(0 0 0 / 0.15), 0 8px 10px -6px rgb(0 0 0 / 0.15)',
+    '--shadow-xl':
+      '0 25px 35px -8px rgb(0 0 0 / 0.15), 0 12px 15px -8px rgb(0 0 0 / 0.15)',
 
     // Animations - Faster, more energetic
     '--animation-fade-in': 'fade-in 0.2s ease-out',
@@ -94,5 +97,5 @@ export const primeTheme = {
     '--ease-default': 'cubic-bezier(0.2, 0, 0, 1)',
     '--ease-in-out': 'cubic-bezier(0.4, 0, 0.2, 1)',
     '--ease-bounce': 'cubic-bezier(0.2, 0.8, 0.4, 1.2)',
-  }
+  },
 }

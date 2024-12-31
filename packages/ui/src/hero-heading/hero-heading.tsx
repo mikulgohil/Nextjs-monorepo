@@ -8,18 +8,18 @@ export function HeroHeading({
   ctaText,
   onCtaClick,
   className = '',
-  children
+  children,
 }: HeroHeadingProps) {
   return (
     <div className={`text-center ${className}`}>
-      <h1 className="text-4xl font-bold tracking-tight sm:text-6xl font-heading text-primary">
+      <h1 className="font-heading text-primary text-4xl font-bold tracking-tight sm:text-6xl">
         {title}
       </h1>
-      <p className="mt-6 text-lg leading-8 text-gray-600 font-sans">
+      <p className="mt-6 font-sans text-lg leading-8 text-gray-600">
         {subtitle}
       </p>
       <div className="mt-10 flex items-center justify-center gap-x-6">
-        <Button 
+        <Button
           onClick={onCtaClick}
           size="lg"
           className="rounded-full px-8 font-sans"
@@ -30,4 +30,4 @@ export function HeroHeading({
       </div>
     </div>
   )
-} 
+}

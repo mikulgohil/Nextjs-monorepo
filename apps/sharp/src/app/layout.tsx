@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Lexend, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
@@ -22,19 +22,20 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: 'Sharp Project',
-  description: 'Sharp project using shared UI components'
+  description: 'Sharp project using shared UI components',
 }
 
 export default function RootLayout({
-  children
+  children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${lexend.variable} ${jetbrainsMono.variable}`}>
-      <body className="theme-sharp">
-        {children}
-      </body>
+    <html
+      lang="en"
+      className={`${inter.variable} ${lexend.variable} ${jetbrainsMono.variable}`}
+    >
+      <body className="theme-sharp">{children}</body>
     </html>
   )
 }

@@ -5,19 +5,25 @@ This document outlines the design system used across our projects. Each project 
 ## Themes Overview
 
 ### Focus Theme
+
 A modern, clean design system optimized for readability and focus:
+
 - Colors: Blue-based primary with purple secondary and amber accents
 - Typography: Inter for body text, Lexend for headings
 - Characteristics: Balanced spacing, subtle shadows, smooth transitions
 
 ### Prime Theme
+
 A bold, vibrant design system that makes a strong impact:
+
 - Colors: Electric blue primary with vibrant purple secondary and hot pink accents
 - Typography: SF Pro Display for body text, Montserrat for headings
 - Characteristics: Larger spacing, dramatic shadows, energetic animations
 
 ### Sharp Theme
+
 A minimalist, high-contrast design system emphasizing clarity:
+
 - Colors: Monochromatic base with bold red accents
 - Typography: Archivo for body text, Space Grotesk for headings
 - Characteristics: Precise spacing, architectural shadows, quick transitions
@@ -59,6 +65,7 @@ Each theme includes the following color tokens:
 
 Usage:
 \`\`\`tsx
+
 <div className="bg-primary text-primary-light border-primary-dark" />
 \`\`\`
 
@@ -66,27 +73,28 @@ Usage:
 
 Font Families:
 \`\`\`css
-font-sans      /* Primary text font */
-font-heading   /* Heading font */
-font-mono      /* Monospace font */
+font-sans /_ Primary text font _/
+font-heading /_ Heading font _/
+font-mono /_ Monospace font _/
 \`\`\`
 
 Font Sizes:
 \`\`\`css
-text-display-1  /* Largest display text */
-text-display-2  /* Secondary display text */
-text-h1        /* Main heading */
-text-h2        /* Section heading */
-text-h3        /* Subsection heading */
-text-h4        /* Small heading */
-text-body-lg   /* Large body text */
-text-body      /* Default body text */
-text-body-sm   /* Small body text */
-text-caption   /* Caption text */
+text-display-1 /_ Largest display text _/
+text-display-2 /_ Secondary display text _/
+text-h1 /_ Main heading _/
+text-h2 /_ Section heading _/
+text-h3 /_ Subsection heading _/
+text-h4 /_ Small heading _/
+text-body-lg /_ Large body text _/
+text-body /_ Default body text _/
+text-body-sm /_ Small body text _/
+text-caption /_ Caption text _/
 \`\`\`
 
 Usage:
 \`\`\`tsx
+
 <h1 className="font-heading text-h1">Heading</h1>
 <p className="font-sans text-body">Body text</p>
 \`\`\`
@@ -95,18 +103,19 @@ Usage:
 
 Consistent spacing scale across all themes:
 \`\`\`css
-spacing-2xs    /* Extra extra small */
-spacing-xs     /* Extra small */
-spacing-sm     /* Small */
-spacing-md     /* Medium */
-spacing-lg     /* Large */
-spacing-xl     /* Extra large */
-spacing-2xl    /* Extra extra large */
-spacing-3xl    /* Extra extra extra large */
+spacing-2xs /_ Extra extra small _/
+spacing-xs /_ Extra small _/
+spacing-sm /_ Small _/
+spacing-md /_ Medium _/
+spacing-lg /_ Large _/
+spacing-xl /_ Extra large _/
+spacing-2xl /_ Extra extra large _/
+spacing-3xl /_ Extra extra extra large _/
 \`\`\`
 
 Usage:
 \`\`\`tsx
+
 <div className="p-md mb-lg gap-sm" />
 \`\`\`
 
@@ -114,12 +123,12 @@ Usage:
 
 Border radius tokens:
 \`\`\`css
-rounded-none   /* No radius */
-rounded-sm     /* Small radius */
-rounded-md     /* Medium radius */
-rounded-lg     /* Large radius */
-rounded-xl     /* Extra large radius */
-rounded-full   /* Full radius (circular) */
+rounded-none /_ No radius _/
+rounded-sm /_ Small radius _/
+rounded-md /_ Medium radius _/
+rounded-lg /_ Large radius _/
+rounded-xl /_ Extra large radius _/
+rounded-full /_ Full radius (circular) _/
 \`\`\`
 
 Usage:
@@ -131,14 +140,15 @@ Usage:
 
 Box shadow variations:
 \`\`\`css
-shadow-sm     /* Small shadow */
-shadow-md     /* Medium shadow */
-shadow-lg     /* Large shadow */
-shadow-xl     /* Extra large shadow */
+shadow-sm /_ Small shadow _/
+shadow-md /_ Medium shadow _/
+shadow-lg /_ Large shadow _/
+shadow-xl /_ Extra large shadow _/
 \`\`\`
 
 Usage:
 \`\`\`tsx
+
 <div className="shadow-md hover:shadow-lg" />
 \`\`\`
 
@@ -169,6 +179,7 @@ ease-bounce
 
 Usage:
 \`\`\`tsx
+
 <div className="animate-fade-in duration-normal ease-default" />
 \`\`\`
 
@@ -197,7 +208,7 @@ Primary Button:
   duration-fast
   ease-default
 ">
-  Click Me
+Click Me
 </button>
 \`\`\`
 
@@ -205,6 +216,7 @@ Primary Button:
 
 Basic Card:
 \`\`\`tsx
+
 <div className="
   bg-surface
   p-lg
@@ -224,6 +236,7 @@ Basic Card:
 
 Content Section:
 \`\`\`tsx
+
 <section className="space-y-lg">
   <h2 className="font-heading text-h2 text-primary">Section Title</h2>
   <p className="font-sans text-body text-text">

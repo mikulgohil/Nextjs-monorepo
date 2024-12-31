@@ -7,11 +7,8 @@ export const Heading = ({
   ...props
 }: React.HTMLAttributes<HTMLHeadingElement>) => {
   return (
-    <h2 
-      className={clsx(
-        "font-heading text-2xl font-bold",
-        className
-      )}
+    <h2
+      className={clsx('font-heading text-2xl font-bold', className)}
       {...props}
     >
       {children}
@@ -25,13 +22,7 @@ export const Text = ({
   ...props
 }: React.HTMLAttributes<HTMLParagraphElement>) => {
   return (
-    <p 
-      className={clsx(
-        "font-sans text-base",
-        className
-      )}
-      {...props}
-    >
+    <p className={clsx('font-sans text-base', className)} {...props}>
       {children}
     </p>
   )

@@ -7,12 +7,12 @@ describe('HeroHeading', () => {
   const defaultProps = {
     title: 'Welcome to our site',
     subtitle: 'Discover amazing features',
-    ctaText: 'Get Started'
+    ctaText: 'Get Started',
   }
 
   it('renders all required props correctly', () => {
     render(<HeroHeading {...defaultProps} />)
-    
+
     expect(screen.getByText(defaultProps.title)).toBeInTheDocument()
     expect(screen.getByText(defaultProps.subtitle)).toBeInTheDocument()
     expect(screen.getByText(defaultProps.ctaText)).toBeInTheDocument()
@@ -20,7 +20,7 @@ describe('HeroHeading', () => {
 
   it('applies custom className correctly', () => {
     render(<HeroHeading {...defaultProps} className="custom-class" />)
-    
+
     const container = screen.getByText(defaultProps.title).closest('div')
     expect(container).toHaveClass('custom-class')
   })
@@ -28,10 +28,10 @@ describe('HeroHeading', () => {
   it('calls onCtaClick when CTA button is clicked', () => {
     const onCtaClick = jest.fn()
     render(<HeroHeading {...defaultProps} onCtaClick={onCtaClick} />)
-    
+
     const button = screen.getByText(defaultProps.ctaText)
     fireEvent.click(button)
-    
+
     expect(onCtaClick).toHaveBeenCalledTimes(1)
   })
 
@@ -41,13 +41,13 @@ describe('HeroHeading', () => {
         <button>Secondary Action</button>
       </HeroHeading>
     )
-    
+
     expect(screen.getByText('Secondary Action')).toBeInTheDocument()
   })
 
   it('applies correct heading styles', () => {
     render(<HeroHeading {...defaultProps} />)
-    
+
     const heading = screen.getByText(defaultProps.title)
     expect(heading).toHaveClass(
       'text-4xl',
@@ -60,7 +60,7 @@ describe('HeroHeading', () => {
 
   it('applies correct subtitle styles', () => {
     render(<HeroHeading {...defaultProps} />)
-    
+
     const subtitle = screen.getByText(defaultProps.subtitle)
     expect(subtitle).toHaveClass(
       'text-lg',
@@ -72,12 +72,8 @@ describe('HeroHeading', () => {
 
   it('applies correct CTA button styles', () => {
     render(<HeroHeading {...defaultProps} />)
-    
+
     const button = screen.getByText(defaultProps.ctaText)
-    expect(button).toHaveClass(
-      'rounded-full',
-      'px-8',
-      'font-sans'
-    )
+    expect(button).toHaveClass('rounded-full', 'px-8', 'font-sans')
   })
 })

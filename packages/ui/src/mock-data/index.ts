@@ -1,2 +1,2 @@
-export * from './hero-heading';
-export * from './button';
+export * from './hero-heading'
+export * from './button'

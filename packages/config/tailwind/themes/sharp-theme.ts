@@ -94,5 +94,5 @@ export const sharpTheme = {
     '--ease-default': 'cubic-bezier(0.25, 0, 0, 1)',
     '--ease-in-out': 'cubic-bezier(0.25, 0, 0, 1)',
     '--ease-bounce': 'cubic-bezier(0.25, 0.5, 0.3, 1)',
-  }
+  },
 }

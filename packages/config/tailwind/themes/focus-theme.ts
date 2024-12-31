@@ -76,9 +76,12 @@ export const focusTheme = {
 
     // Shadows
     '--shadow-sm': '0 1px 2px 0 rgb(0 0 0 / 0.05)',
-    '--shadow-md': '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
-    '--shadow-lg': '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
-    '--shadow-xl': '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
+    '--shadow-md':
+      '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
+    '--shadow-lg':
+      '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+    '--shadow-xl':
+      '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
 
     // Animations
     '--animation-fade-in': 'fade-in 0.3s ease-in-out',
@@ -94,5 +97,5 @@ export const focusTheme = {
     '--ease-default': 'cubic-bezier(0.4, 0, 0.2, 1)',
     '--ease-in-out': 'cubic-bezier(0.4, 0, 0.2, 1)',
     '--ease-bounce': 'cubic-bezier(0.34, 1.56, 0.64, 1)',
-  }
+  },
 }

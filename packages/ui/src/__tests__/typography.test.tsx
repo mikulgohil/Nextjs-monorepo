@@ -19,7 +19,12 @@ describe('Typography Components', () => {
     it('merges custom className with default styles', () => {
       render(<Heading className="custom-class">Test Heading</Heading>)
       const heading = screen.getByText('Test Heading')
-      expect(heading).toHaveClass('font-heading', 'text-2xl', 'font-bold', 'custom-class')
+      expect(heading).toHaveClass(
+        'font-heading',
+        'text-2xl',
+        'font-bold',
+        'custom-class'
+      )
     })
 
     it('forwards additional props', () => {

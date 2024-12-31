@@ -12,9 +12,9 @@ const Home: FC<HomePageProps> = () => {
         title="Start your free trial today"
         subtitle="Try Flowbite Platform for 30 days. No credit card required."
         ctaText="Free trial for 30 days"
-        className="max-w-3xl mx-auto"
+        className="mx-auto max-w-3xl"
       />
-      <div className='text-primary'>Hello</div>
+      <div className="text-primary">Hello</div>
     </main>
   )
 }

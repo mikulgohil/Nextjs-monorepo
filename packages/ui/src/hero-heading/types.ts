@@ -5,4 +5,4 @@ export interface HeroHeadingProps extends BaseProps {
   subtitle: string
   ctaText: string
   onCtaClick?: () => void
-} 
+}

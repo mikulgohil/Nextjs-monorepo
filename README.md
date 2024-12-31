@@ -88,6 +88,7 @@ pnpm build:storybook
 ### Packages
 
 - **@repo/ui**: Shared UI component library
+
   - Built with TypeScript and Tailwind CSS
   - Includes Storybook for component documentation
   - Comprehensive test coverage with Jest

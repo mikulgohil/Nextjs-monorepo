@@ -2,18 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* Add your theme variables here */
+@layer base {
+  :root {
+    --color-primary: #0070f3;
+    --color-primary-light: #3291ff;
+    --color-primary-dark: #0051cc;
+    
+    --color-secondary: #666666;
+    --color-secondary-light: #888888;
+    --color-secondary-dark: #444444;
+    
+    --color-accent: #7928ca;
+    --color-accent-light: #8a3fd1;
+    --color-accent-dark: #6821b0;
+    
+    --color-background: #ffffff;
+    --color-background-alt: #f7f7f7;
+    
+    --color-surface: #ffffff;
+    --color-surface-hover: #f7f7f7;
+    --color-surface-active: #eeeeee;
+    
+    --color-text: #000000;
+    --color-text-muted: #666666;
+    --color-text-inverted: #ffffff;
+    
+    --color-border: #e5e5e5;
+    --color-border-focus: #0070f3;
+  }
 }
 
-.theme-prime {
-  /* Prime theme variables */
-}
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark transition-colors;
+  }
 
-.theme-sharp {
-  /* Sharp theme variables */
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-900 hover:bg-gray-200 transition-colors;
+  }
 }
-
-.theme-focus {
-  /* Focus theme variables */
-} 

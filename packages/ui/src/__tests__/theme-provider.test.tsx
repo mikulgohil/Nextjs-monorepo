@@ -4,31 +4,31 @@ import '@testing-library/jest-dom'
 import { ThemeProvider, useTheme } from '../theme-provider'
 
 // Mock the theme configurations
-jest.mock('@repo/config/tailwind/themes/prime-theme', () => ({
+jest.mock('../../../packages/config/tailwind/themes/prime-theme', () => ({
   primeTheme: {
     cssVariables: {
       '--color-primary': '#0070f3',
-      '--color-secondary': '#7928ca'
-    }
-  }
+      '--color-secondary': '#7928ca',
+    },
+  },
 }))
 
-jest.mock('@repo/config/tailwind/themes/sharp-theme', () => ({
+jest.mock('../../../packages/config/tailwind/themes/sharp-theme', () => ({
   sharpTheme: {
     cssVariables: {
       '--color-primary': '#000000',
-      '--color-secondary': '#333333'
-    }
-  }
+      '--color-secondary': '#333333',
+    },
+  },
 }))
 
-jest.mock('@repo/config/tailwind/themes/focus-theme', () => ({
+jest.mock('../../../packages/config/tailwind/themes/focus-theme', () => ({
   focusTheme: {
     cssVariables: {
       '--color-primary': '#1a1a1a',
-      '--color-secondary': '#4a4a4a'
-    }
-  }
+      '--color-secondary': '#4a4a4a',
+    },
+  },
 }))
 
 describe('ThemeProvider', () => {
@@ -53,8 +53,12 @@ describe('ThemeProvider', () => {
       </ThemeProvider>
     )
 
-    expect(document.documentElement.style.getPropertyValue('--color-primary')).toBe('#0070f3')
-    expect(document.documentElement.style.getPropertyValue('--color-secondary')).toBe('#7928ca')
+    expect(
+      document.documentElement.style.getPropertyValue('--color-primary')
+    ).toBe('#0070f3')
+    expect(
+      document.documentElement.style.getPropertyValue('--color-secondary')
+    ).toBe('#7928ca')
   })
 
   it('applies specified default theme CSS variables', () => {
@@ -64,8 +68,12 @@ describe('ThemeProvider', () => {
       </ThemeProvider>
     )
 
-    expect(document.documentElement.style.getPropertyValue('--color-primary')).toBe('#000000')
-    expect(document.documentElement.style.getPropertyValue('--color-secondary')).toBe('#333333')
+    expect(
+      document.documentElement.style.getPropertyValue('--color-primary')
+    ).toBe('#000000')
+    expect(
+      document.documentElement.style.getPropertyValue('--color-secondary')
+    ).toBe('#333333')
   })
 
   it('updates CSS variables when theme changes', () => {
@@ -81,14 +89,18 @@ describe('ThemeProvider', () => {
     )
 
     // Initial theme (prime)
-    expect(document.documentElement.style.getPropertyValue('--color-primary')).toBe('#0070f3')
+    expect(
+      document.documentElement.style.getPropertyValue('--color-primary')
+    ).toBe('#0070f3')
 
     // Change theme to focus
     act(() => {
       getByText('Change Theme').click()
     })
 
-    expect(document.documentElement.style.getPropertyValue('--color-primary')).toBe('#1a1a1a')
+    expect(
+      document.documentElement.style.getPropertyValue('--color-primary')
+    ).toBe('#1a1a1a')
   })
 })
 
@@ -99,8 +111,10 @@ describe('useTheme', () => {
       return null
     }
 
-    const consoleError = jest.spyOn(console, 'error').mockImplementation(() => {})
-    
+    const consoleError = jest
+      .spyOn(console, 'error')
+      .mockImplementation(() => {})
+
     expect(() => {
       render(<TestComponent />)
     }).toThrow('useTheme must be used within a ThemeProvider')
