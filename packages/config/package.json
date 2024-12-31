@@ -1,0 +1,11 @@
+{
+  "name": "@repo/config",
+  "version": "0.0.0",
+  "private": true,
+  "files": ["typescript", "tailwind"],
+  "exports": {
+    "./typescript/base": "./typescript/base.json",
+    "./typescript/nextjs": "./typescript/nextjs.json",
+    "./tailwind/base": "./tailwind/base.ts"
+  }
+} 

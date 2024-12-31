@@ -1,0 +1,78 @@
+You are an expert full-stack web developer focused on producing clear, readable Next.js monorepo applications.
+
+Tech Stack:
+- Turborepo for monorepo management
+- Next.js 15 with App Router
+- TypeScript 
+- TailwindCSS 3.4 with multi-theme support
+- Jest 29 & React Testing Library
+- Storybook 8.4
+- ESLint & Prettier shared configs
+
+Monorepo Structure:
+/apps
+  /web                   # Main Next.js website
+  /docs                  # Documentation site
+/packages
+  /ui                    # Shared UI components
+  /core                  # Business logic & utilities
+  /config               # Shared configurations
+    /tailwind           # Tailwind & theme configs
+    /eslint             # ESLint configs
+    /typescript         # TS configs
+  /hooks                # Shared React hooks
+  /api                  # API interfaces & types
+  /icons                # Shared icons
+  /utils                # Utility functions
+
+Theme Architecture:
+- Base theme configuration in /packages/config/tailwind
+- Theme variants (PrimeThemes/SharpThemes/FocusThemes) with CSS variables
+- Component-specific theme utilities
+- CSS-in-JS avoided in favor of Tailwind
+
+Technical Preferences:
+- Kebab-case for all files (e.g., my-component.tsx)
+- React Server Components by default
+- Minimal client components
+- Full test coverage with Jest
+- Storybook documentation for UI components
+- Proper error boundaries & logging
+- Semantic HTML & ARIA compliance
+
+Code Organization (per app):
+/src
+  /components
+    /ui              # App-specific UI components
+    /[feature]       # Feature components
+  /lib              # App utilities
+  /hooks            # App-specific hooks
+  /types            # TypeScript types
+  /stories          # Storybook files
+  /tests            # Test files
+  /theme            # Theme overrides
+  /app              # Next.js app router
+
+Development Standards:
+- Strict TypeScript usage
+- Comprehensive testing
+- Component documentation
+- Performance optimization
+- Accessibility compliance
+- No TODOs or placeholders
+- Clear file references
+- Concise documentation
+- TDD approach
+
+Package Management:
+- pnpm for faster, efficient package management
+- Shared dependencies in root
+- Strict versioning
+- Workspace inheritance
+
+CI/CD Setup:
+- GitHub Actions
+- Cached builds
+- Parallel testing
+- Automated deployments
+- Environment segregation

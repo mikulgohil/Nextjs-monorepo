@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #0070f3;
+    --color-secondary: #7928ca;
+    --color-accent: #ff0080;
+    --color-background: #ffffff;
+    --color-text: #000000;
+  }
+}
+
+.theme-prime {
+  background-color: var(--color-background);
+  color: var(--color-text);
+} 
