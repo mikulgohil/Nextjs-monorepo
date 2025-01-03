@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '../button'
+import { Button } from '../../atoms/button'
 import type { HeroHeadingProps } from './types'
 
 export function HeroHeading({

@@ -5,4 +5,6 @@ export interface HeroHeadingProps extends BaseProps {
   subtitle: string
   ctaText: string
   onCtaClick?: () => void
+  className?: string
+  children?: React.ReactNode
 } 

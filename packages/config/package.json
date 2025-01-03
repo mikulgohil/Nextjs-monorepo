@@ -2,10 +2,31 @@
   "name": "@repo/config",
   "version": "0.0.0",
   "private": true,
-  "files": ["typescript", "tailwind"],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
   "exports": {
-    "./typescript/base": "./typescript/base.json",
-    "./typescript/nextjs": "./typescript/nextjs.json",
-    "./tailwind/base": "./tailwind/base.ts"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./tailwind": {
+      "types": "./dist/tailwind/index.d.ts",
+      "import": "./dist/tailwind/index.mjs",
+      "require": "./dist/tailwind/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
   }
-} 
+}

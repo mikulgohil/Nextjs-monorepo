@@ -40,39 +40,85 @@ Technical Preferences:
 - Proper error boundaries & logging
 - Semantic HTML & ARIA compliance
 
-Code Organization (per app):
-/src
-  /components
-    /ui              # App-specific UI components
-    /[feature]       # Feature components
-  /lib              # App utilities
-  /hooks            # App-specific hooks
-  /types            # TypeScript types
-  /stories          # Storybook files
-  /tests            # Test files
-  /theme            # Theme overrides
-  /app              # Next.js app router
+Monorepo Structure:
+/apps
+  /web                   # Main Next.js website
+  /docs                  # Documentation site
+/packages
+  /ui                    # Shared UI components
+    /src
+      /components       # Atomic Design components
+        /atoms         # Basic building blocks
+        /molecules     # Combinations of atoms
+        /organisms    # Complex components
+        /templates    # Page layouts
+      /theme          # Theme configuration
+      /utils          # Utility functions
+      /hooks          # Custom React hooks
+      /styles         # Global styles
+      /types          # Shared TypeScript types
+  /core                  # Business logic & utilities
+  /config               # Shared configurations
+    /tailwind           # Tailwind & theme configs
+    /eslint             # ESLint configs
+    /typescript         # TS configs
+  /hooks                # Shared React hooks
+  /api                  # API interfaces & types
+  /icons                # Shared icons
+  /utils                # Utility functions
+
+Component Structure:
+component-name/
+├── index.ts           # Clean exports
+├── component-name.tsx # Main component
+├── types.ts          # TypeScript types
+├── variants.ts       # Component variants
+├── component-name.stories.tsx  # Storybook stories
+└── __tests__/        # Tests directory
+    └── component-name.test.tsx
+
+Theme Architecture:
+- Base theme configuration in /packages/config/tailwind
+- Theme variants (PrimeThemes/SharpThemes/FocusThemes) with CSS variables
+- Component-specific theme utilities
+- CSS-in-JS avoided in favor of Tailwind
 
 Development Standards:
 - Strict TypeScript usage
-- Comprehensive testing
-- Component documentation
-- Performance optimization
-- Accessibility compliance
-- No TODOs or placeholders
-- Clear file references
-- Concise documentation
-- TDD approach
+- Component-focused development following Atomic Design
+- Single responsibility principle for components
+- Full test coverage with Jest
+- Comprehensive Storybook documentation
+- Proper error boundaries & logging
+- Semantic HTML & ARIA compliance
+- Pure utility functions with thorough testing
+- Clear component categorization (atoms/molecules/organisms/templates)
+
+File Organization:
+- Kebab-case for all files (e.g., my-component.tsx)
+- Each component in its own directory
+- Index files for clean exports
+- Separate type definitions
+- Component variants in separate files
+- README.md in each major directory
+
+Documentation Requirements:
+- Component props and usage in stories
+- Directory-level README files
+- Type definitions and interfaces
+- Theme tokens and usage
+- Utility function parameters and returns
+
+Testing Standards:
+- Unit tests for all components
+- Visual regression tests in Storybook
+- Cross-theme testing
+- Viewport responsiveness testing
+- Pure utility function testing
+- Mock data for development and testing
 
 Package Management:
-- pnpm for faster, efficient package management
+- pnpm for dependency management
 - Shared dependencies in root
 - Strict versioning
 - Workspace inheritance
-
-CI/CD Setup:
-- GitHub Actions
-- Cached builds
-- Parallel testing
-- Automated deployments
-- Environment segregation

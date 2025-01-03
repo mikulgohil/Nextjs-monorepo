@@ -11,6 +11,11 @@ const config: StorybookConfig = {
   core: {
     disableTelemetry: true,
   },
+  // Add Storysource and Accessibility addons
+  addons: [
+    '@storybook/addon-storysource',
+    '@storybook/addon-a11y',
+  ],
 };
 
 export default config; 

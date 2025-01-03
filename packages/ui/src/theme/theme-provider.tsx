@@ -1,9 +1,7 @@
 'use client'
 
 import { createContext, useContext, useState, useEffect } from 'react'
-import { primeTheme } from '@repo/config/tailwind/themes/prime-theme'
-import { sharpTheme } from '@repo/config/tailwind/themes/sharp-theme'
-import { focusTheme } from '@repo/config/tailwind/themes/focus-theme'
+import { primeTheme, sharpTheme, focusTheme } from '@repo/config/tailwind'
 
 type Theme = 'prime' | 'sharp' | 'focus'
 

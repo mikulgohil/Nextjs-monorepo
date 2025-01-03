@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/nextjs';
+import path from 'path';
 
 const config: StorybookConfig = {
   stories: [
@@ -9,16 +10,30 @@ const config: StorybookConfig = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    '@storybook/addon-themes'
+    '@storybook/addon-themes',
+    {
+      name: '@storybook/addon-styling',
+      options: {
+        postCss: true
+      },
+    }
   ],
   framework: {
     name: '@storybook/nextjs',
     options: {}
   },
   docs: {
-    autodocs: true
+    autodocs: 'tag'
   },
-  staticDirs: ['../public']
+  webpackFinal: async (config) => {
+    if (config.resolve) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        '@repo/config': path.resolve(__dirname, '../../../config'),
+      }
+    }
+    return config
+  }
 };
 
 export default config;
